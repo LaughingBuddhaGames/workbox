@@ -6,7 +6,7 @@
   "scripts": {
     "local-jsdoc": "jsdoc",
     "local-lerna": "lerna",
-    "test": "nyc --clean false --require @std/esm --require ./infra/utils/sw-env --silent mocha",
+    "test": "nyc --require ./infra/utils/sw-env --require ./infra/utils/esm-env --clean false --silent mocha",
     "coverage-report": "nyc report --reporter lcov --reporter text",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "lint": "eslint \"**/*.{js,mjs}\" --ignore-path .gitignore",
@@ -42,7 +42,7 @@
   "homepage": "https://github.com/GoogleChrome/workbox#readme",
   "devDependencies": {
     "@google-cloud/storage": "^1.2.1",
-    "@std/esm": "^0.5.1",
+    "@std/esm": "^0.11.2",
     "archiver": "^2.0.3",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.0",
