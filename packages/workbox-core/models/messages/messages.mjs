@@ -93,4 +93,9 @@ export default {
       `setCacheDeatils({${cacheNameId}: '...'}). Received a value of ` +
       `'${JSON.stringify(value)}'`;
   },
+
+  'duplicate-queue-name': ({name}) => {
+    return `The Queue name '${name}' is already being used. ` +
+        `All instances of backgroundSync.Queue must be given unique names.`;
+  },
 };
